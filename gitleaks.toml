@@ -1,0 +1,8 @@
+title = "DevSecOps Sample App Gitleaks Config"
+description = "Basic config to scan for hardcoded secrets"
+report = "gitleaks-report.json"
+
+[rules]
+  [[rules.allowlist]]
+    description = "Ignore test dummy secrets"
+    regex = '''dummy|example|test'''
