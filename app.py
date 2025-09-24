@@ -1,9 +1,9 @@
 from flask import Flask
-
+import os
 app = Flask(__name__)
 
 # ❌ Hardcoded secret (intentionally for Gitleaks demo)
-API_KEY = "12345-SECRET-API-KEY"
+API_KEY = os.getenv("API_KEY")
 
 @app.route("/")
 def home():
