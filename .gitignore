@@ -14,7 +14,7 @@ venv/
 .env.*
 
 # Gitleaks reports
-day1/gitleaks-report.json
+gitleaks-report.json
 day1/gitleaks-clean.json
 
 # IDE/project files
