@@ -1,0 +1,26 @@
+stages:
+  - test
+  - dast
+
+# Example unit test stage (optional)
+test-job:
+  stage: test
+  script:
+    - echo "Running unit tests..."
+    - pytest || true
+
+# 🔹 ZAP DAST Scan Stage
+zap-dast-scan:
+  stage: dast
+  image: ghcr.io/zaproxy/zaproxy:latest
+  script:
+    # Run baseline scan against Juice Shop
+    - zap-baseline.py -t http://juice:3000 -r zap-report.html || true
+  artifacts:
+    when: always
+    paths:
+      - zap-report.html
+    expire_in: 1 week
+  services:
+    - name: bkimminich/juice-shop:latest
+      alias: juice
