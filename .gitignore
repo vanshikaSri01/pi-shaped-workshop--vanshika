@@ -12,11 +12,16 @@ venv/
 # Environment files (secrets)
 day1/.env
 .env.*
-.idea
+.idea/
 
 # Gitleaks reports
 day1/gitleaks-report.json
 day1/gitleaks-clean.json
+day3/bandit-report.html
+day3/bandit-report.json
+day3/semgrep-report.json
+*.yaml
+*.yml
 
 # IDE/project files
 .idea/
