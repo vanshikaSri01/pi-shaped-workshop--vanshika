@@ -1,0 +1,5 @@
+Flask==1.1.1
+requests==2.18.0
+bandit
+
+

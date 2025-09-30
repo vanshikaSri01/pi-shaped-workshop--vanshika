@@ -1,0 +1,5 @@
+[[rules]]
+id = "hardcoded-api-key"
+description = "Hardcoded API Key pattern"
+regex = '''(?i)(api_key|secret|password)\s*[:=]\s*["']?[A-Za-z0-9_\-]{8,}["']?'''
+entropy = false
